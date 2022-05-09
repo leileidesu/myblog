@@ -1,0 +1,28 @@
+baseURL: https://leileidesu.github.io/myblog
+languageCode: en-us
+title: 做我的小猫猫吧
+theme: "PaperMod"
+
+params:  
+    disqusShortname: https-leileidesu-github-io-myblog
+    ShowCodeCopyButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowToc: true
+    ShowReadingTime: true
+    comments: true
+    profileMode:
+        enabled: true
+        title: "<Title>" # optional default will be site title
+        subtitle: "欢迎欢迎，欢迎秋月"
+        imageUrl: "1.png" # optional 
+        imageTitle: "我是小秋月噢" # optional 
+        imageWidth: 200 # custom size
+        imageHeight: 200 # custom size
+        buttons:
+            - name: Archives
+              url: archives
+            - name: Nikkis
+              url: nikkis
+            - name: Tags
+              url: tags
