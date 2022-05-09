@@ -30,6 +30,7 @@
 
   {{- if .Content }}
   <div class="post-content">
+
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
@@ -52,7 +53,13 @@
   </footer>
 
   {{- if (.Param "comments") }}
-
+<script src="https://utteranc.es/client.js"
+repo="leileidesu/leileidesu.github.io"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+</script>  
   {{- end }}
 </article>
 
