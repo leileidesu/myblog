@@ -20,8 +20,8 @@ params:
         imageWidth: 200 # custom size
         imageHeight: 200 # custom size
         buttons:
-            - name: Archives
-              url: archives
+            #- name: Archives
+             # url: archives
             - name: Nikkis
               url: nikkis
             - name: Tags
