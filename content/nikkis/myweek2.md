@@ -1,7 +1,7 @@
 ---
 title: "Myweek2"
 date: 2022-05-17T18:10:56+08:00
-
+tags: ["akizuki"]
 ---
 
 

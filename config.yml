@@ -2,9 +2,9 @@ baseURL: https://leileidesu.github.io/myblog
 languageCode: en-us
 title: 做我的小猫猫吧
 theme: "PaperMod"
+#theme: "hugo-split-theme"
 
 params:  
-    disqusShortname: https-leileidesu-github-io-myblog
     ShowCodeCopyButtons: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
