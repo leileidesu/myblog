@@ -1,6 +1,6 @@
 ---
 title: "Groupwork_completed"
-date: 2022-06-20T13:16:06+08:00z'x
+date: 2022-06-20T13:16:06+08:00
 tags: ["akizuki"]
 ---
 
