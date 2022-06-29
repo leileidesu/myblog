@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>做我的小猫猫吧</title><link>https://leileidesu.github.io/myblog/</link><description>Recent content on 做我的小猫猫吧</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 22 Jun 2022 01:30:33 +0800</lastBuildDate><atom:link href="https://leileidesu.github.io/myblog/index.xml" rel="self" type="application/rss+xml"/><item><title>Myweek4</title><link>https://leileidesu.github.io/myblog/nikkis/myweek4/</link><pubDate>Wed, 22 Jun 2022 01:30:33 +0800</pubDate><guid>https://leileidesu.github.io/myblog/nikkis/myweek4/</guid><description>周三 秋月猫晚上好！今天是6/22/01:48。我决定以后的周记不攒到一周一次，而是少量多次想到就写。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>做我的小猫猫吧</title><link>https://leileidesu.github.io/myblog/</link><description>Recent content on 做我的小猫猫吧</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 29 Jun 2022 21:32:17 +0800</lastBuildDate><atom:link href="https://leileidesu.github.io/myblog/index.xml" rel="self" type="application/rss+xml"/><item><title>Week1</title><link>https://leileidesu.github.io/myblog/leetcode/week1/</link><pubDate>Wed, 29 Jun 2022 21:32:17 +0800</pubDate><guid>https://leileidesu.github.io/myblog/leetcode/week1/</guid><description>今天开始做力扣的Hot100题单，即便是简答题也给我难哭了（笑，所以说，我真的需要这门文凭吗。
+1 两数之和 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
+你可以按任意顺序返回答案。
+我第一眼只能想到先排个序然后双指针，我是笨蛋.jpg，不过我记得这个可以O(n)的。
+其实要用哈希表，比如target是6，第一个数是2，看到2就往map里面加一个键值对(2,indexof(2))，等到下次遇到4的时候，在map里面找有没有2，有的话输出4的下标和indexof(2)就可以。
+class Solution { public: vector&amp;lt;int&amp;gt; twoSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { map&amp;lt;int, int&amp;gt; map1;//建立一个map int n=nums.size(); for(int i=0;i&amp;lt;n;i++) { if(map1.find(target - nums[i])!=map1.end())//是否遍历过target-num[i] { return {i,map1.find(target - nums[i])-&amp;gt;second}; } map1[nums[i]]=i;//nums[i]是第i个 } return {}; } }; 来个经典的
+map&amp;lt;int, int&amp;gt; map1; 定义map。
+if(map1.find(target - nums[i])!=map1.end()) 判断map里有没有元素用的。
+map1[nums[i]]=i; 增加键值对的方式。
+2 两数相加 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
+请你将两个数相加，并以相同形式返回一个表示和的链表。</description></item><item><title>Myweek4</title><link>https://leileidesu.github.io/myblog/nikkis/myweek4/</link><pubDate>Wed, 22 Jun 2022 01:30:33 +0800</pubDate><guid>https://leileidesu.github.io/myblog/nikkis/myweek4/</guid><description>周三 秋月猫晚上好！今天是6/22/01:48。我决定以后的周记不攒到一周一次，而是少量多次想到就写。
 前两天结束了os和数据库的考试喵，但是都不是很想回忆，只能说我大约解放了，剩下的事情都在可控范围内。
 每次通宵以后的第二天下午那种极度放松又疲惫，睡到第二天清晨的感觉，真是珍贵让人怀念，甚至有点上瘾。比如今天就从五点睡到了九点，起来city跟我说今晚可以见最后一面。
 我便收拾收拾出门，室友：“你要和秋月约会吗？”，“不是的，我要见一个朋友最后一面”。
