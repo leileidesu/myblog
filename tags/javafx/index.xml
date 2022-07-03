@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>javafx on 做我的小猫猫吧</title><link>https://leileidesu.github.io/myblog/tags/javafx/</link><description>Recent content in javafx on 做我的小猫猫吧</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 03 Jul 2022 12:04:04 +0800</lastBuildDate><atom:link href="https://leileidesu.github.io/myblog/tags/javafx/index.xml" rel="self" type="application/rss+xml"/><item><title>Javafx开发总结</title><link>https://leileidesu.github.io/myblog/leetcode/javafx/</link><pubDate>Sun, 03 Jul 2022 12:04:04 +0800</pubDate><guid>https://leileidesu.github.io/myblog/leetcode/javafx/</guid><description>javafx overview 这学期做的两个java项目（喵photoshop和喵wechat）中，我都承担了不少的javafx代码，现在磕磕绊绊也比较容易写出能跑的东西了。便介绍一下我对javafx的总结。
+官方介绍 JavaFX 是一个开源的下一代客户端应用平台，适用于基于Java构建的桌面、移动端和嵌入式系统。 它是许多个人和公司的共同努力的成果，目的是为开发丰富的客户端应用提供一个现代、高效、功能齐全的工具包。
+项目结构 IDEA一路default后创建出来的javafx项目如图所示。
+在src的package中，javafx程序的入口是Helloapplication，在其中调用了
+new FXMLLoader(HelloApplication.class.getResource(&amp;#34;hello-view.fxml&amp;#34;)); 是从对应的resourses中根据某个布局文件建立一个窗口，并通过一系列如setTitle, setIcon等方法进行配置，最后显示出来。
+在hello-view.fxml中有
+fx:controller=&amp;#34;com.example.demo1.HelloController&amp;#34; 意思是，这个布局文件绑定的控制类是com.example.demo1.HelloController。
+综上所述，javafx项目的重要特点是，布局和功能分离，
+综上所述，javafx项目的最基本结构就是，一个布局文件对应一个控制类（控制这个布局文件的某个按钮点击后调用什么方法等），然后从布局文件load一个窗口，进行愉快的交互。
+用SceneBuilder创建布局 javafx为创建布局提供了官方的很方便的工具：SceneBuilder，创建一个fxml文件以后右键用SceneBuilder点开，大约如图所示。 我们可以在此拖拽各种部件到各种布局中，个人而言，HBox（里面的组件和子布局水平排列）和VBox（垂直排列）的嵌套可以解决绝大多数问题。
+如上图所示布局，是在最外侧的AnchorPane布局中，放入一个VBox，VBox中放入三个HBox，每个HBox中间放置一个label和一个textfield，最下面的放置两个button，并对每一个布局设置其排列规律为水平垂直居中（如保证“帐号”标签和旁边的输入框在所在的HBox里水平垂直居中），再适当调整Margin（部件之间的距离），如设置“帐号”标签右边有20px的间隔，只需要这寥寥几布操作就可以做出这种基础又实用的布局文件。
+在SceneBuilder中保存后的fxml文件实际如下：
+就像html一样用嵌套的标签和标签的属性确定出布局样式。还是可以拖拽的plus版，真神奇。
+为fxml添加样式 javafx可以使用css样式，前端狂喜。 在SceneBuilder中选中组件就可以在右边添加样式，javafx的css阉割了不少，不过只要配色讲究一些也可以做的比较美观。
+如喵photoshop的最左边工具栏，实际上只是一个VBox中紧密排列着数个按钮，并对他们设置了取消圆角和背景颜色而已。（虽然看着很麻烦但是用拖拽很愉快的！）
+&amp;lt;Button id=&amp;#34;button1&amp;#34; onAction=&amp;#34;#choose&amp;#34; prefHeight=&amp;#34;38.0&amp;#34; prefWidth=&amp;#34;42.0&amp;#34; style=&amp;#34;-fx-background-radius: 0;&amp;#34; textFill=&amp;#34;WHITE&amp;#34;&amp;gt; &amp;lt;graphic&amp;gt; &amp;lt;ImageView fitHeight=&amp;#34;44.0&amp;#34; fitWidth=&amp;#34;28.0&amp;#34; pickOnBounds=&amp;#34;true&amp;#34; preserveRatio=&amp;#34;true&amp;#34;&amp;gt; &amp;lt;image&amp;gt; &amp;lt;Image url=&amp;#34;https://miaotu-headers.oss-cn-hangzhou.aliyuncs.com/photoshopicons/xuanze.png&amp;#34; /&amp;gt; &amp;lt;/image&amp;gt; &amp;lt;/ImageView&amp;gt; &amp;lt;/graphic&amp;gt; &amp;lt;/Button&amp;gt; 除了行内的css样式，我们同样可以引入css文件，上图中工具栏便引入了css文件。
+不如说因为行内css不能写伪类选择器（#button1:focused代表被选中的button1），所以必须绑定一个css文件。
+&amp;lt;VBox id=&amp;#34;left&amp;#34; prefHeight=&amp;#34;691.0&amp;#34; prefWidth=&amp;#34;44.0&amp;#34; style=&amp;#34;-fx-background-color: #424874;&amp;#34; stylesheets=&amp;#34;@style.css&amp;#34;&amp;gt; &amp;lt;Button id=&amp;#34;button1&amp;#34;&amp;gt;&amp;lt;/Button&amp;gt; &amp;lt;Button id=&amp;#34;button1&amp;#34;&amp;gt;&amp;lt;/Button&amp;gt; &amp;lt;Button id=&amp;#34;button1&amp;#34;&amp;gt;&amp;lt;/Button&amp;gt; &amp;lt;/VBox&amp;gt; #button1 { -fx-background-color: #424874; } #button1:focused { -fx-background-color: #A6B1E1; } 控制类 上面提到，一个布局要绑定一个控制类，比如在喵wechat中，登录注册窗口要有一个单独的控制类，里面写着按下“登录”，“注册”按钮要做什么事；消息列表窗口有一个单独的控制器，里面写着怎么根据当前登录用户的不用而显示不同的用户头像，怎么获取这个用户的好友列表等，更不用谈消息窗口的“发消息”按钮如果没有绑定的控制类就更糟糕了。</description></item></channel></rss>
