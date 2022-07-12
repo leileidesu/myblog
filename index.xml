@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>做我的小猫猫吧</title><link>https://leileidesu.github.io/myblog/</link><description>Recent content on 做我的小猫猫吧</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 03 Jul 2022 12:04:04 +0800</lastBuildDate><atom:link href="https://leileidesu.github.io/myblog/index.xml" rel="self" type="application/rss+xml"/><item><title>Javafx开发总结</title><link>https://leileidesu.github.io/myblog/leetcode/javafx/</link><pubDate>Sun, 03 Jul 2022 12:04:04 +0800</pubDate><guid>https://leileidesu.github.io/myblog/leetcode/javafx/</guid><description>javafx overview 这学期做的两个java项目（喵photoshop和喵wechat）中，我都承担了不少的javafx代码，现在磕磕绊绊也比较容易写出能跑的东西了。便介绍一下我对javafx的总结。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>做我的小猫猫吧</title><link>https://leileidesu.github.io/myblog/</link><description>Recent content on 做我的小猫猫吧</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 13 Jul 2022 01:31:54 +0800</lastBuildDate><atom:link href="https://leileidesu.github.io/myblog/index.xml" rel="self" type="application/rss+xml"/><item><title>Myweek5</title><link>https://leileidesu.github.io/myblog/nikkis/myweek5/</link><pubDate>Wed, 13 Jul 2022 01:31:54 +0800</pubDate><guid>https://leileidesu.github.io/myblog/nikkis/myweek5/</guid><description>秋月你好！现在是2022/7/13/01:32。
+没错！这是我在西安的第二天凌晨！我结束了一下午的奔波和一晚上的游玩，很期待七个小时后见到你。
+我又有很久没有记日记了，我来说说七月份我的生活吧！
+我的暑假是7.8晚上开始的，因为我被李红羽拉来做中国软件杯的前端，我做了一个我觉得我做的比较可爱的界面！
+显然，当然又通宵了，搞得自己很难受。不过很开心，多了一个朋友。我们一起，前一天晚上吃疯狂星期四，第二天早上我去给两个人去学二买早饭，我写了三个文档，车轱辘话来回讲，（用户使用说明书，概要设计文档，详细设计文档），蚌埠住了真的。
+开心的还有，被主动邀请去了海底捞，对方是余豪和李红羽，既然主动邀请了我，就相当于是觉得我是个聊得来的朋友了对吧，我很高兴被这么认可。
+开心的还有，比如一些和小吕一起的沙耶之歌。
+再比如一些管长。
+再比如一周目通关的游戏。
+其实回去的时候我带上了我的港澳通行证，即便明知道我的澳门之旅寄了（我好遗憾啊&amp;hellip;&amp;hellip;）
+不过西安之旅复活了就够我开心了，我本以为一个都不剩的。
+一些启程：
+一些小甘雨：
+一些核酸：
+一些出站：
+一些相遇：
+一些情趣：
+一些今晚三个人一起的致死量外卖+两集剧场版柯南：
+一些四个op对电视的妙用：
+今晚三个人一起玩真的特别特别特别开心，如果加上你一定是更加开心的事。
+我还很开心，今晚和你通了电话，我有点兴奋和羞怯，不过明天就可以一起玩了。</description></item><item><title>Javafx开发总结</title><link>https://leileidesu.github.io/myblog/leetcode/javafx/</link><pubDate>Sun, 03 Jul 2022 12:04:04 +0800</pubDate><guid>https://leileidesu.github.io/myblog/leetcode/javafx/</guid><description>javafx overview 这学期做的两个java项目（喵photoshop和喵wechat）中，我都承担了不少的javafx代码，现在磕磕绊绊也比较容易写出能跑的东西了。便介绍一下我对javafx的总结。
 官方介绍 JavaFX 是一个开源的下一代客户端应用平台，适用于基于Java构建的桌面、移动端和嵌入式系统。 它是许多个人和公司的共同努力的成果，目的是为开发丰富的客户端应用提供一个现代、高效、功能齐全的工具包。
 项目结构 IDEA一路default后创建出来的javafx项目如图所示。
 在src的package中，javafx程序的入口是Helloapplication，在其中调用了
